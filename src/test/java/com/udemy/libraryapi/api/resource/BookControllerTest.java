@@ -5,6 +5,7 @@ import com.udemy.libraryapi.api.dto.BookDTO;
 import com.udemy.libraryapi.domain.entity.Book;
 import com.udemy.libraryapi.exception.BusinessException;
 import com.udemy.libraryapi.service.BookService;
+import com.udemy.libraryapi.service.LoanService;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -48,6 +49,9 @@ class BookControllerTest {
 
     @MockBean
     BookService service;
+
+    @MockBean
+    LoanService loanService;
 
     @Test
     @DisplayName("Should create a book when is success.")

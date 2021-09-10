@@ -16,18 +16,6 @@ import java.util.List;
 @SpringBootApplication
 public class LibraryApiApplication {
 
-	@Autowired
-	EmailService emailService;
-
-	@Bean
-	public CommandLineRunner runner(){
-		return args -> {
-			List<String> emails = Arrays.asList("test@email.com");
-			emailService.sendMails("Testando serviço de email",emails);
-			System.out.println("Teste de envio de email realizado com suceso");
-		};
-	}
-
 	@Bean
 	public ModelMapper modelMapper(){
 		return new ModelMapper();
