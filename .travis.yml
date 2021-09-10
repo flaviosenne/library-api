@@ -11,3 +11,9 @@ script:
   - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
   - export JAVA_HOME=$HOME/openjdk11
 
+before_install:
+  - chmod +x mvnw
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
